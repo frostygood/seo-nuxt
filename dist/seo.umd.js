@@ -3109,7 +3109,7 @@ function _asyncToGenerator(fn) {
 
 
 /* harmony default export */ var article = ({
-  getAllArticle: function getAllArticle(name, _ref) {
+  getAllArticles: function getAllArticles(name, _ref) {
     return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
       var $content, error, articles;
       return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -3130,7 +3130,7 @@ function _asyncToGenerator(fn) {
               _context.prev = 7;
               _context.t0 = _context["catch"](1);
               error({
-                message: 'Article not found'
+                message: 'Articles not found'
               });
 
             case 10:
@@ -3142,6 +3142,41 @@ function _asyncToGenerator(fn) {
           }
         }
       }, _callee, null, [[1, 7]]);
+    }))();
+  },
+  getArticle: function getArticle(name, slug, _ref2) {
+    return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+      var $content, params, error, article;
+      return regeneratorRuntime.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              $content = _ref2.$content, params = _ref2.params, error = _ref2.error;
+              _context2.prev = 1;
+              _context2.next = 4;
+              return $content('' + name, params[slug]).fetch();
+
+            case 4:
+              article = _context2.sent;
+              _context2.next = 10;
+              break;
+
+            case 7:
+              _context2.prev = 7;
+              _context2.t0 = _context2["catch"](1);
+              error({
+                message: 'Article not found'
+              });
+
+            case 10:
+              return _context2.abrupt("return", article);
+
+            case 11:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2, null, [[1, 7]]);
     }))();
   }
 });
