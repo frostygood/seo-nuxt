@@ -3146,15 +3146,15 @@ function _asyncToGenerator(fn) {
   },
   getArticle: function getArticle(name, slug, _ref2) {
     return _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-      var $content, params, error, article;
+      var $content, error, article;
       return regeneratorRuntime.wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
-              $content = _ref2.$content, params = _ref2.params, error = _ref2.error;
+              $content = _ref2.$content, error = _ref2.error;
               _context2.prev = 1;
               _context2.next = 4;
-              return $content('' + name, params[slug]).fetch();
+              return $content('' + name, '' + slug).fetch();
 
             case 4:
               article = _context2.sent;

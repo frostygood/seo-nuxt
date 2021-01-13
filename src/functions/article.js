@@ -8,10 +8,10 @@ export default {
       }
       return articles
     },
-    async getArticle(name, slug, { $content, params, error }) {
+    async getArticle(name, slug, { $content, error }) {
       let article
       try {
-        article = await $content(''+name, params[slug]).fetch()
+        article = await $content(''+name, ''+slug).fetch()
       } catch (e) {
         error({ message: 'Article not found' })
       }
